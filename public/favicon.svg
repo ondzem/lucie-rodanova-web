@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- Background Circle -->
+    <circle cx="256" cy="256" r="256" fill="#1F2937" />
+    
+    <!-- Letter L -->
+    <path d="M 210,130 L 210,380 L 380,380 L 380,335 L 260,335 L 260,130 Z" fill="#B69E57" />
+    
+    <!-- Decorative House Line -->
+    <path d="M 140,250 L 256,150 L 372,250" fill="none" stroke="#B69E57" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+</svg>
