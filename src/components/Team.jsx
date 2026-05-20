@@ -17,7 +17,7 @@ const Team = () => {
             phone: '773 964 522', 
             email: 'lucie.rodanova@4fin.cz', 
             photo: '/Rodanova tym fotka.webp', 
-            desc: "Jako oblastní ředitelka finančního poradenství a vedoucí osobnost Leaders Finance vnímám za každým grafem především člověka, rodinu a jejich sny. Čísla jsou pro mě výsledkem důvěry, ne cílem samotným.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
+            desc: "Za každým grafem a číslem vidím především lidský příběh, rodinu a jejich sny. Jako oblastní ředitelka a vedoucí osobnost Leaders Finance vnímám finanční výsledky jako projev důvěry, ne jako cíl samotný.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
         },
         { 
             name: 'Sarah Roďanová', 
@@ -49,7 +49,7 @@ const Team = () => {
             phone: '732 499 252', 
             email: 'jakub.minarcik@4fin.cz', 
             photo: '/Minarcik - rodanova.webp', 
-            desc: "Za každým číslem vidím lidský příběh a životní sny. Odmítám tabulkové řešení – mým cílem je být upřímným parťákem, který složité finance vysvětlí jednoduše a s pochopením." 
+            desc: "Věřím, že finance nejsou jen o číslech a grafech, ale především o lidských příbězích, rodinách a splněných snech. Právě proto ke své práci přistupuji jinak – odmítám univerzální šablony a tabulková řešení, protože každý člověk i jeho životní cíle jsou jedinečné.\n\nNechci být poradcem, kterého slyšíte jen ve chvíli, kdy je potřeba podepsat smlouvu. Zakládám si na upřímnosti, přirozené komunikaci a dlouhodobých vztazích. Chci pro vás být partnerem, kterému můžete kdykoliv zavolat, když potřebujete radu nebo jistotu.\n\nDnešní svět je rychlý a finance složité. O to víc věřím, že lidé nepotřebují anonymní přístup, ale parťáka, který jim složité věci vysvětlí jednoduše, jedná fér a opravdu jim stojí po boku. A přesně na tom stavím svou práci." 
         },
         { 
             name: 'Ing. Simona Pavelková', 
