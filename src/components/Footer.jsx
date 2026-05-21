@@ -25,7 +25,7 @@ const Footer = () => {
                         <a href="https://www.instagram.com/lucie.rodanova_leadersfinance/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
                             <Instagram size={18} strokeWidth={1.5} />
                         </a>
-                        <a href="https://www.linkedin.com/in/lucie-rodanova/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
+                        <a href="https://www.linkedin.com/in/lucie-ro%C4%8Fanov%C3%A1/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
                             <Linkedin size={18} strokeWidth={1.5} />
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=100063497562888" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">

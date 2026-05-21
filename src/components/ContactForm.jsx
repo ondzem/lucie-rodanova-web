@@ -255,7 +255,7 @@ const ContactForm = () => {
                                 <a href="https://www.facebook.com/profile.php?id=100063497562888" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
                                     <Facebook size={24} strokeWidth={1.5} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/lucie-rodanova/" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
+                                <a href="https://www.linkedin.com/in/lucie-ro%C4%8Fanov%C3%A1/" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
                                     <Linkedin size={24} strokeWidth={1.5} />
                                 </a>
                             </div>
