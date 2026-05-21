@@ -22,10 +22,10 @@ const Footer = () => {
                     </p>
 
                     <div className="flex items-center gap-4">
-                        <a href="https://instagram.com/lucie.rodanova_leadersfinance" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
+                        <a href="https://www.instagram.com/lucie.rodanova_leadersfinance/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
                             <Instagram size={18} strokeWidth={1.5} />
                         </a>
-                        <a href="https://www.linkedin.com/in/lucie-roďanová/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
+                        <a href="https://www.linkedin.com/in/lucie-rodanova/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
                             <Linkedin size={18} strokeWidth={1.5} />
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=100063497562888" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
@@ -44,7 +44,6 @@ const Footer = () => {
                         <li><a href="#o-mne" className="hover:text-white transition-colors duration-300">O mně</a></li>
                         <li><a href="#reference" className="hover:text-white transition-colors duration-300">Reference</a></li>
                         <li><a href="#tym" className="hover:text-white transition-colors duration-300">Tým</a></li>
-                        <li><a href="#blog" className="hover:text-white transition-colors duration-300">Blog</a></li>
                         <li><a href="#kontakt" className="hover:text-white transition-colors duration-300">Kontakt</a></li>
                     </ul>
                 </div>
@@ -77,7 +76,6 @@ const Footer = () => {
                                 Používání Cookies (Nastavení)
                             </button>
                         </li>
-                        <li><a href="#" className="hover:text-white transition-colors duration-300">Certifikát</a></li>
                     </ul>
                 </div>
 

@@ -1,10 +1,64 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const TeamMemberDesc = ({ desc }) => {
+    const containerRef = useRef(null);
+    const [canScroll, setCanScroll] = useState(false);
+    const [isAtBottom, setIsAtBottom] = useState(false);
+
+    const checkScroll = () => {
+        const el = containerRef.current;
+        if (el) {
+            const hasOverflow = el.scrollHeight > el.clientHeight;
+            setCanScroll(hasOverflow);
+            // Check if scrolled within 12px of bottom (considering padding)
+            const atBottom = el.scrollHeight - el.scrollTop <= el.clientHeight + 12;
+            setIsAtBottom(atBottom);
+        }
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(checkScroll, 100);
+        window.addEventListener('resize', checkScroll);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', checkScroll);
+        };
+    }, [desc]);
+
+    return (
+        <div className="w-full flex flex-col items-center mb-6">
+            <div 
+                ref={containerRef}
+                onScroll={checkScroll}
+                onMouseEnter={checkScroll}
+                className="font-helvetica text-xs sm:text-[13px] text-gray-300 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[150ms] ease-[cubic-bezier(0.23,1,0.32,1)] leading-[1.6] max-w-[240px] md:max-w-[280px] overflow-y-auto max-h-[160px] xl:max-h-[240px] pr-2 custom-card-scrollbar pointer-events-auto flex flex-col gap-2 text-center"
+            >
+                {desc.split('\n\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                ))}
+            </div>
+            
+            {/* Visual indicator below the text and above contact details */}
+            <div className="h-6 flex items-center justify-center mt-2 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
+                {canScroll && !isAtBottom ? (
+                    <div className="flex flex-col items-center animate-bounce text-[#B69E57] opacity-80 pointer-events-none transition-opacity duration-300">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 13l-7 7-7-7m14-6l-7 7-7-7" />
+                        </svg>
+                    </div>
+                ) : (
+                    <div className="w-3 h-[1px] bg-[#B69E57]/30"></div>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const Team = () => {
     const sectionRef = useRef(null);
@@ -13,11 +67,11 @@ const Team = () => {
     const teamMembers = [
         { 
             name: 'Lucie Roďanová', 
-            role: 'Oblastní ředitelka', 
+            role: 'Leader kolínské kanceláře', 
             phone: '773 964 522', 
             email: 'lucie.rodanova@4fin.cz', 
             photo: '/Rodanova tym fotka.webp', 
-            desc: "Za každým grafem a číslem vidím především lidský příběh, rodinu a jejich sny. Jako oblastní ředitelka a vedoucí osobnost Leaders Finance vnímám finanční výsledky jako projev důvěry, ne jako cíl samotný.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
+            desc: "U každé finanční analýzy přemýšlím o konkrétních lidech a zaměřuji se na jejich skutečné životní příběhy a sny, nikoliv jen na chladná čísla a grafy. Jako leader kolínské kanceláře Leaders Finance vnímám finanční výsledky jako projev vaší důvěry a společný krok k bezpečné budoucnosti.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
         },
         { 
             name: 'Sarah Roďanová', 
@@ -41,7 +95,7 @@ const Team = () => {
             phone: '777 567 666', 
             email: 'petr.nevole@4fin.cz', 
             photo: '/Nevole - rodanova.webp', 
-            desc: "Ve financích působím od roku 2008. Mou prioritou není rychlý prodej, ale dlouhodobá důvěra, lidský přístup a precizně nastavená strategie pro každou vaši životní etapu." 
+            desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie." 
         },
         { 
             name: 'Jakub Minařčík', 
@@ -161,6 +215,24 @@ const Team = () => {
                     -ms-overflow-style: none;
                     scrollbar-width: none;
                 }
+                .custom-card-scrollbar::-webkit-scrollbar {
+                    width: 4px;
+                }
+                .custom-card-scrollbar::-webkit-scrollbar-track {
+                    background: rgba(255, 255, 255, 0.03);
+                    border-radius: 2px;
+                }
+                .custom-card-scrollbar::-webkit-scrollbar-thumb {
+                    background: rgba(182, 158, 87, 0.35);
+                    border-radius: 2px;
+                }
+                .custom-card-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background: rgba(182, 158, 87, 0.6);
+                }
+                .custom-card-scrollbar {
+                    scrollbar-width: thin;
+                    scrollbar-color: rgba(182, 158, 87, 0.35) rgba(255, 255, 255, 0.03);
+                }
             `}</style>
             
             <div className="max-w-[1400px] mx-auto px-6 lg:px-20 h-full relative z-10">
@@ -244,11 +316,7 @@ const Team = () => {
                                     
                                     <div className="w-12 h-[1px] bg-[#B69E57] my-5 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[100ms] ease-[cubic-bezier(0.23,1,0.32,1)]"></div>
                                     
-                                    <div className="font-helvetica text-xs sm:text-[13px] text-gray-300 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[150ms] ease-[cubic-bezier(0.23,1,0.32,1)] leading-[1.6] max-w-[240px] md:max-w-[280px] mb-8 overflow-y-auto max-h-[160px] xl:max-h-[240px] hide-scrollbar pointer-events-auto flex flex-col gap-2 text-center">
-                                        {member.desc.split('\n\n').map((paragraph, i) => (
-                                            <p key={i}>{paragraph}</p>
-                                        ))}
-                                    </div>
+                                    <TeamMemberDesc desc={member.desc} />
 
                                     {/* Contact Information on Hover */}
                                     <div className="flex flex-col gap-2 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[200ms] ease-[cubic-bezier(0.23,1,0.32,1)]">

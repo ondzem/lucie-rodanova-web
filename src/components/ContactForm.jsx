@@ -249,13 +249,13 @@ const ContactForm = () => {
                         <div>
                             <p className="font-montserrat text-[9px] font-semibold tracking-[0.2em] uppercase text-[#404042] mb-3">Sociální sítě</p>
                             <div className="flex items-center gap-5 mt-2">
-                                <a href="https://instagram.com/lucie.rodanova_leadersfinance" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
+                                <a href="https://www.instagram.com/lucie.rodanova_leadersfinance/" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
                                     <Instagram size={24} strokeWidth={1.5} />
                                 </a>
                                 <a href="https://www.facebook.com/profile.php?id=100063497562888" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
                                     <Facebook size={24} strokeWidth={1.5} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/lucie-roďanová/" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
+                                <a href="https://www.linkedin.com/in/lucie-rodanova/" target="_blank" rel="noreferrer" className="text-[#1F2937] hover:text-[#B69E57] hover:-translate-y-1 transition-all">
                                     <Linkedin size={24} strokeWidth={1.5} />
                                 </a>
                             </div>
