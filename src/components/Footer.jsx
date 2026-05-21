@@ -89,7 +89,7 @@ const Footer = () => {
                     </p>
                     <ul className="flex flex-col space-y-2 font-helvetica text-[11px] text-gray-500">
                         <li>
-                            <a href="https://www.4fin.cz/gdpr/" target="_blank" rel="noopener noreferrer" className="hover:text-[#B69E57] transition-colors duration-300 flex items-center gap-2">
+                            <a href="https://www.4fin.cz/ochrana-osobnich-udaju" target="_blank" rel="noopener noreferrer" className="hover:text-[#B69E57] transition-colors duration-300 flex items-center gap-2">
                                 <span className="w-1 h-1 rounded-full bg-[#B69E57]/80"></span>
                                 Ochrana osobních údajů (4fin)
                             </a>
