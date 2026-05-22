@@ -101,6 +101,8 @@ const Team = () => {
             objectPosition: 'center 70%',
             transformDefault: 'scale(1.13) translateY(-5%)',
             transformHover: 'scale(1.23) translateY(-5%)',
+            transformDefaultMobile: 'scale(1.02) translateY(-2%)',
+            transformHoverMobile: 'scale(1.12) translateY(-2%)',
             desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie." 
         },
         { 
@@ -244,11 +246,19 @@ const Team = () => {
                 }
                 .team-member-img {
                     object-position: var(--img-object-position, center);
-                    transform: var(--img-transform-default, scale(1));
+                    transform: var(--img-transform-default-mobile, scale(1));
                     transition: transform 1200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 700ms ease;
                 }
                 .team-card:hover .team-member-img {
-                    transform: var(--img-transform-hover, scale(1.1));
+                    transform: var(--img-transform-hover-mobile, scale(1.1));
+                }
+                @media (min-width: 1024px) {
+                    .team-member-img {
+                        transform: var(--img-transform-default-desktop, scale(1));
+                    }
+                    .team-card:hover .team-member-img {
+                        transform: var(--img-transform-hover-desktop, scale(1.1));
+                    }
                 }
             `}</style>
             
@@ -295,8 +305,10 @@ const Team = () => {
                                         className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-30 z-0 team-member-img" 
                                         style={{
                                             '--img-object-position': member.objectPosition || 'center',
-                                            '--img-transform-default': member.transformDefault || 'scale(1)',
-                                            '--img-transform-hover': member.transformHover || 'scale(1.1)'
+                                            '--img-transform-default-mobile': member.transformDefaultMobile || member.transformDefault || 'scale(1)',
+                                            '--img-transform-hover-mobile': member.transformHoverMobile || member.transformHover || 'scale(1.1)',
+                                            '--img-transform-default-desktop': member.transformDefault || 'scale(1)',
+                                            '--img-transform-hover-desktop': member.transformHover || 'scale(1.1)'
                                         }}
                                         loading="lazy"
                                     />
