@@ -101,8 +101,7 @@ const Team = () => {
             objectPosition: 'center 70%',
             transformDefault: 'scale(1.13) translateY(-5%)',
             transformHover: 'scale(1.23) translateY(-5%)',
-            transformDefaultMobile: 'scale(1.0) translateY(-1%)',
-            transformHoverMobile: 'scale(1.1) translateY(-1%)',
+
             desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie." 
         },
         { 
@@ -294,7 +293,7 @@ const Team = () => {
                                 className="team-card relative group overflow-hidden bg-[#1A222F] 
                                     w-[85vw] sm:w-[45vw] lg:w-[350px] xl:w-[400px] 
                                     shrink-0 snap-start 
-                                    aspect-[4/5] lg:aspect-auto lg:h-[500px] xl:h-[600px]
+                                    aspect-[2/3] lg:aspect-auto lg:h-[500px] xl:h-[600px]
                                     flex flex-col justify-end p-6 lg:p-8 cursor-pointer select-none"
                             >
                                 {/* Background Image Loading */}
