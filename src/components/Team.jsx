@@ -71,6 +71,7 @@ const Team = () => {
             phone: '773 964 522', 
             email: 'lucie.rodanova@4fin.cz', 
             photo: '/Rodanova tym fotka.webp', 
+            objectPosition: 'center 20%',
             desc: "U každé finanční analýzy přemýšlím o konkrétních lidech a zaměřuji se na jejich skutečné životní příběhy a sny, nikoliv jen na chladná čísla a grafy. Jako leader kolínské kanceláře Leaders Finance vnímám finanční výsledky jako projev vaší důvěry a společný krok k bezpečné budoucnosti.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
         },
         { 
@@ -95,6 +96,7 @@ const Team = () => {
             phone: '777 567 666', 
             email: 'petr.nevole@4fin.cz', 
             photo: '/Nevole - rodanova.webp', 
+            objectPosition: 'center 70%',
             desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie." 
         },
         { 
@@ -103,6 +105,7 @@ const Team = () => {
             phone: '732 499 252', 
             email: 'jakub.minarcik@4fin.cz', 
             photo: '/Minarcik - rodanova.webp', 
+            objectPosition: 'center 25%',
             desc: "Věřím, že finance nejsou jen o číslech a grafech, ale především o lidských příbězích, rodinách a splněných snech. Právě proto ke své práci přistupuji jinak – odmítám univerzální šablony a tabulková řešení, protože každý člověk i jeho životní cíle jsou jedinečné.\n\nNechci být poradcem, kterého slyšíte jen ve chvíli, kdy je potřeba podepsat smlouvu. Zakládám si na upřímnosti, přirozené komunikaci a dlouhodobých vztazích. Chci pro vás být partnerem, kterému můžete kdykoliv zavolat, když potřebujete radu nebo jistotu.\n\nDnešní svět je rychlý a finance složité. O to víc věřím, že lidé nepotřebují anonymní přístup, ale parťáka, který jim složité věci vysvětlí jednoduše, jedná fér a opravdu jim stojí po boku. A přesně na tom stavím svou práci." 
         },
         { 
@@ -276,6 +279,7 @@ const Team = () => {
                                         src={member.photo} 
                                         alt={member.name} 
                                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110 opacity-75 group-hover:opacity-30 z-0" 
+                                        style={{ objectPosition: member.objectPosition || 'center' }}
                                         loading="lazy"
                                     />
                                 )}
