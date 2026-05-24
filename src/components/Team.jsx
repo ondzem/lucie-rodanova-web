@@ -33,7 +33,7 @@ const TeamMemberDesc = ({ desc }) => {
 
     return (
         <div className="w-full flex flex-col items-center mb-6">
-            <div 
+            <div
                 ref={containerRef}
                 onScroll={checkScroll}
                 onMouseEnter={checkScroll}
@@ -43,7 +43,7 @@ const TeamMemberDesc = ({ desc }) => {
                     <p key={i}>{paragraph}</p>
                 ))}
             </div>
-            
+
             {/* Visual indicator below the text and above contact details */}
             <div className="h-6 flex items-center justify-center mt-2 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[180ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
                 {canScroll && !isAtBottom ? (
@@ -65,72 +65,72 @@ const Team = () => {
     const sliderRef = useRef(null);
 
     const teamMembers = [
-        { 
-            name: 'Lucie Roďanová', 
-            role: 'Leader kolínské kanceláře', 
-            phone: '773 964 522', 
-            email: 'lucie.rodanova@4fin.cz', 
-            photo: '/Rodanova tym fotka.webp', 
+        {
+            name: 'Lucie Roďanová',
+            role: 'Oblastní Ředitelka',
+            phone: '773 964 522',
+            email: 'lucie.rodanova@4fin.cz',
+            photo: '/Rodanova tym fotka.webp',
             objectPosition: 'center 20%',
             transformDefault: 'scale(1.12) translateY(3%)',
             transformHover: 'scale(1.22) translateY(3%)',
-            desc: "U každé finanční analýzy přemýšlím o konkrétních lidech a zaměřuji se na jejich skutečné životní příběhy a sny, nikoliv jen na chladná čísla a grafy. Jako leader kolínské kanceláře Leaders Finance vnímám finanční výsledky jako projev vaší důvěry a společný krok k bezpečné budoucnosti.\n\nSvoji práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost – zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu." 
+            desc: "U každé finanční analýzy myslím na konkrétní lidi, jejich životní příběhy a sny. Nejde mi jen o chladná čísla a grafy. Každý úspěch a dobrý výsledek vnímám jako projev vaší důvěry a společný krok k bezpečné budoucnosti.\n\nSvou práci stavím na lidskosti, férovosti a společných hodnotách. Věřím, že skutečný poradce nejdřív naslouchá a teprve potom pomáhá. Jak ráda říkám: „Smlouva není jen podpis. Smlouva je závazek. A servis je klíč.“\n\nSilně věřím ve finanční nezávislost — zejména žen. Dnes vedu tým profesionálů, kteří chtějí víc než jen práci. Společně rosteme a já jim s hrdostí pomáhám ukazovat cestu."
         },
-        { 
-            name: 'Sarah Roďanová', 
-            role: 'Koncipientka', 
-            phone: '777 578 228', 
-            email: 'sarah.rodanova@4fin.cz', 
-            photo: '/Sarah Team foto.webp', 
-            desc: "Pomáhám klientům orientovat se ve světě financí a hledám řešení s dlouhodobým smyslem. Věřím, že individuální přístup je klíčem k důvěře a budování pevných vztahů." 
+        {
+            name: 'Sarah Roďanová',
+            role: 'Koncipientka',
+            phone: '777 578 228',
+            email: 'sarah.rodanova@4fin.cz',
+            photo: '/Sarah Team foto.webp',
+            desc: "Pomáhám klientům orientovat se ve světě financí a hledám řešení s dlouhodobým smyslem. Věřím, že individuální přístup je klíčem k důvěře a budování pevných vztahů."
         },
-        { 
-            name: 'Lucie Dubnová', 
-            role: 'Odborná asistentka', 
-            phone: '+420 737 656 549', 
-            email: 'lucie.dubnova@4fin.cz', 
-            photo: '/Dubnova - rodanova.webp', 
-            desc: "Starám se o bezchybný chod administrativy a jsem spolehlivou podporou celého týmu. Pečlivost a efektivní řešení každodenních výzev jsou mým standardem." 
+        {
+            name: 'Lucie Dubnová',
+            role: 'Odborná asistentka',
+            phone: '+420 737 656 549',
+            email: 'lucie.dubnova@4fin.cz',
+            photo: '/Dubnova - rodanova.webp',
+            desc: "Starám se o bezchybný chod administrativy a jsem spolehlivou podporou celého týmu. Pečlivost a efektivní řešení každodenních výzev jsou mým standardem."
         },
-        { 
-            name: 'Petr Nevole', 
-            role: 'TOP Konzultant', 
-            phone: '777 567 666', 
-            email: 'petr.nevole@4fin.cz', 
-            photo: '/Nevole - rodanova.webp', 
+        {
+            name: 'Petr Nevole',
+            role: 'TOP Konzultant',
+            phone: '777 567 666',
+            email: 'petr.nevole@4fin.cz',
+            photo: '/Nevole - rodanova.webp',
             objectPosition: 'center 70%',
             transformDefault: 'scale(1.13) translateY(-5%)',
             transformHover: 'scale(1.23) translateY(-5%)',
             transformDefaultMobile: 'scale(1.07) translateY(-3%)',
             transformHoverMobile: 'scale(1.17) translateY(-3%)',
-            desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie." 
+            desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie."
         },
-        { 
-            name: 'Jakub Minařčík', 
-            role: 'Samostatný konzultant', 
-            phone: '732 499 252', 
-            email: 'jakub.minarcik@4fin.cz', 
-            photo: '/Minarcik - rodanova.webp', 
+        {
+            name: 'Jakub Minařčík',
+            role: 'Samostatný konzultant',
+            phone: '732 499 252',
+            email: 'jakub.minarcik@4fin.cz',
+            photo: '/Minarcik - rodanova.webp',
             objectPosition: 'center 25%',
             transformDefault: 'scale(1.12) translateY(3%)',
             transformHover: 'scale(1.22) translateY(3%)',
-            desc: "Věřím, že finance nejsou jen o číslech a grafech, ale především o lidských příbězích, rodinách a splněných snech. Právě proto ke své práci přistupuji jinak – odmítám univerzální šablony a tabulková řešení, protože každý člověk i jeho životní cíle jsou jedinečné.\n\nNechci být poradcem, kterého slyšíte jen ve chvíli, kdy je potřeba podepsat smlouvu. Zakládám si na upřímnosti, přirozené komunikaci a dlouhodobých vztazích. Chci pro vás být partnerem, kterému můžete kdykoliv zavolat, když potřebujete radu nebo jistotu.\n\nDnešní svět je rychlý a finance složité. O to víc věřím, že lidé nepotřebují anonymní přístup, ale parťáka, který jim složité věci vysvětlí jednoduše, jedná fér a opravdu jim stojí po boku. A přesně na tom stavím svou práci." 
+            desc: "Věřím, že finance nejsou jen o číslech a grafech, ale především o lidských příbězích, rodinách a splněných snech. Právě proto ke své práci přistupuji jinak – odmítám univerzální šablony a tabulková řešení, protože každý člověk i jeho životní cíle jsou jedinečné.\n\nNechci být poradcem, kterého slyšíte jen ve chvíli, kdy je potřeba podepsat smlouvu. Zakládám si na upřímnosti, přirozené komunikaci a dlouhodobých vztazích. Chci pro vás být partnerem, kterému můžete kdykoliv zavolat, když potřebujete radu nebo jistotu.\n\nDnešní svět je rychlý a finance složité. O to víc věřím, že lidé nepotřebují anonymní přístup, ale parťáka, který jim složité věci vysvětlí jednoduše, jedná fér a opravdu jim stojí po boku. A přesně na tom stavím svou práci."
         },
-        { 
-            name: 'Ing. Simona Pavelková', 
-            role: 'Senior konzultantka', 
-            phone: '+420 605 384 990', 
-            email: 'simona.pavelkova@4fin.cz', 
-            photo: '/Pavelkova - rodanova.webp', 
-            desc: "Mým posláním je přinést vám klid a jistotu bezpečných financí pod jednou střechou. Zakládám si na kvalitě a lidském přístupu, díky kterému jsou vaše peníze smysluplně pod kontrolou." 
+        {
+            name: 'Ing. Simona Pavelková',
+            role: 'Senior konzultantka',
+            phone: '+420 605 384 990',
+            email: 'simona.pavelkova@4fin.cz',
+            photo: '/Pavelkova - rodanova.webp',
+            desc: "Mým posláním je přinést vám klid a jistotu bezpečných financí pod jednou střechou. Zakládám si na kvalitě a lidském přístupu, díky kterému jsou vaše peníze smysluplně pod kontrolou."
         },
-        { 
-            name: 'Jaroslava Fliegerová', 
-            role: 'Samostatná konzultantka', 
-            phone: '+420 723 442 552', 
-            email: 'jaroslava.fliegerova@4fin.cz', 
-            photo: null, 
-            desc: "Odbornost. Důvěra. Lidskost." 
+        {
+            name: 'Jaroslava Fliegerová',
+            role: 'Samostatná konzultantka',
+            phone: '+420 723 442 552',
+            email: 'jaroslava.fliegerova@4fin.cz',
+            photo: null,
+            desc: "Odbornost. Důvěra. Lidskost."
         }
     ];
 
@@ -261,9 +261,9 @@ const Team = () => {
                     }
                 }
             `}</style>
-            
+
             <div className="max-w-[1400px] mx-auto px-6 lg:px-20 h-full relative z-10">
-                
+
                 {/* Header Block exactly matching Testimonials layout format */}
                 <div className="w-full flex flex-col xl:flex-row justify-between items-start xl:items-end mb-16 lg:mb-20 team-heading">
                     <div>
@@ -274,17 +274,17 @@ const Team = () => {
                             Tým založený na vztazích.
                         </h2>
                     </div>
-                    
+
                     <p className="font-montserrat text-xs sm:text-[13px] text-gray-500 max-w-sm leading-relaxed mt-6 xl:mt-0 md:pb-2 text-left xl:text-right xl:whitespace-nowrap">
                         Lidé, kteří stojí za vašimi financemi.
                     </p>
                 </div>
 
                 {/* Team Slider Container */}
-                <div 
+                <div
                     className="team-slider-container w-[100vw] relative left-1/2 -translate-x-1/2 lg:w-full lg:left-0 lg:translate-x-0"
                 >
-                    <div 
+                    <div
                         ref={sliderRef}
                         className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-6 lg:px-0 gap-4 lg:gap-[2px]"
                     >
@@ -299,10 +299,10 @@ const Team = () => {
                             >
                                 {/* Background Image Loading */}
                                 {member.photo && (
-                                    <img 
-                                        src={member.photo} 
-                                        alt={member.name} 
-                                        className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-30 z-0 team-member-img" 
+                                    <img
+                                        src={member.photo}
+                                        alt={member.name}
+                                        className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-30 z-0 team-member-img"
                                         style={{
                                             '--img-object-position': member.objectPosition || 'center',
                                             '--img-transform-default-mobile': member.transformDefaultMobile || member.transformDefault || 'scale(1)',
@@ -313,7 +313,7 @@ const Team = () => {
                                         loading="lazy"
                                     />
                                 )}
-                                
+
                                 {/* Initials fallback for items missing valid photos to match design flair */}
                                 {!member.photo && (
                                     <div className="absolute inset-0 flex items-center justify-center font-playfair text-[80px] text-[#B69E57] italic opacity-30 group-hover:opacity-5 transition-opacity duration-700 z-0 select-none">
@@ -339,17 +339,17 @@ const Team = () => {
 
                                 {/* Hover State Text (Centered Content Layout per Reference) */}
                                 <div className="absolute inset-0 z-40 flex flex-col items-center justify-center px-6 lg:px-8 text-center opacity-0 transition-opacity duration-[700ms] group-hover:opacity-100">
-                                    
+
                                     <p className="font-montserrat text-[9px] tracking-[0.24em] font-semibold text-[#B69E57] uppercase mb-4 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
                                         {member.role}
                                     </p>
-                                    
+
                                     <h4 className="font-playfair text-[28px] sm:text-[32px] lg:text-[36px] font-normal text-white leading-[1.1] translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[50ms] ease-[cubic-bezier(0.23,1,0.32,1)] w-full">
-                                        {member.name.split(' ')[0]}<br/>{member.name.split(' ').slice(1).join(' ')}
+                                        {member.name.split(' ')[0]}<br />{member.name.split(' ').slice(1).join(' ')}
                                     </h4>
-                                    
+
                                     <div className="w-12 h-[1px] bg-[#B69E57] my-5 translate-y-6 group-hover:translate-y-0 transition-all duration-[700ms] delay-[100ms] ease-[cubic-bezier(0.23,1,0.32,1)]"></div>
-                                    
+
                                     <TeamMemberDesc desc={member.desc} />
 
                                     {/* Contact Information on Hover */}
@@ -361,7 +361,7 @@ const Team = () => {
                                             {member.email}
                                         </a>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         ))}
