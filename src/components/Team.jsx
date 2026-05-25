@@ -99,10 +99,10 @@ const Team = () => {
             email: 'petr.nevole@4fin.cz',
             photo: '/Nevole - rodanova.webp',
             objectPosition: 'center 30%',
-            transformDefault: 'scale(1.2) translateY(6.5%)',
-            transformHover: 'scale(1.3) translateY(6.5%)',
-            transformDefaultMobile: 'scale(1.2) translateY(6.5%)',
-            transformHoverMobile: 'scale(1.3) translateY(6.5%)',
+            transformDefault: 'scale(1.3) translateY(8%)',
+            transformHover: 'scale(1.4) translateY(8%)',
+            transformDefaultMobile: 'scale(1.3) translateY(8%)',
+            transformHoverMobile: 'scale(1.4) translateY(8%)',
             desc: "V oblasti finančního poradenství působím už od roku 2008 a za tu dobu jsem si vybudoval pozici zkušeného TOP konzultanta. Svým klientům se věnuji komplexně – od ochrany příjmů a rodiny až po dlouhodobé finanční plánování. Právě investice a zhodnocování majetku jsou navíc mou velkou profesní i osobní vášní.\n\nVěřím, že kvalitní poradenství není o rychlém prodeji, ale o dlouhodobé důvěře, lidském přístupu a správně nastavené strategii pro každou životní etapu. Chci být pro své klienty partnerem, na kterého se mohou spolehnout v jakékoli situaci.\n\nKdyž zrovna nepracuji, trávím čas nejraději se svou rodinou, dětmi a zvířaty, která jsou pro mě tou nejdůležitou součástí života a zdrojem energie."
         },
         {
