@@ -123,8 +123,8 @@ const Team = () => {
             email: 'simona.pavelkova@4fin.cz',
             photo: '/Pavelkova - rodanova.webp',
             objectPosition: 'center 45%',
-            transformDefault: 'scale(1.1) translateX(-1.5%) translateY(-1.5%)',
-            transformHover: 'scale(1.2) translateX(-1.5%) translateY(-1.5%)',
+            transformDefault: 'scale(1.15) translateX(-4.5%) translateY(-1.5%)',
+            transformHover: 'scale(1.25) translateX(-4.5%) translateY(-1.5%)',
             desc: "Mým posláním je přinést vám klid a jistotu bezpečných financí pod jednou střechou. Zakládám si na kvalitě a lidském přístupu, díky kterému jsou vaše peníze smysluplně pod kontrolou."
         },
         {
