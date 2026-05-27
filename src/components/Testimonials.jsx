@@ -12,17 +12,17 @@ const Testimonials = () => {
     const testimonials = [
         {
             quote: "Úžasná spolupráce moc doporučuji,co znám paní Roďanovou se mi o vše ohledně financí,pojistek atd.stará jen ona a mně tím odpadá spousty starostí s vyřizováním.Děkuji za vše:-)",
-            name: "Kristýna Wimmerová",
+            name: "Kristýna W.",
             role: "DOPORUČUJE"
         },
         {
             quote: "Maximální spokojenost, profesionální jednání. Zdvořilá a milá, ochotná vysvětlit a poradit v jakou koliv denní dobu.",
-            name: "Kristýna Mrázková",
+            name: "Kristýna M.",
             role: "DOPORUČUJE"
         },
         {
             quote: "Jediným slovem - Profesionálka. Člověk na správném místě.",
-            name: "Danča Peroutková",
+            name: "Danča P.",
             role: "DOPORUČUJE"
         }
     ];
