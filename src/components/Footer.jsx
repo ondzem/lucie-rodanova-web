@@ -28,9 +28,26 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/lucie-ro%C4%8Fanov%C3%A1/" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
                             <Linkedin size={18} strokeWidth={1.5} />
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=100063497562888" target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400">
+                        <button 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const profileId = '100063497562888';
+                                const fbAppUrl = `fb://profile/${profileId}`;
+                                const fbWebUrl = `https://www.facebook.com/profile.php?id=${profileId}`;
+                                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                                if (isMobile) {
+                                    window.location.href = fbAppUrl;
+                                    setTimeout(() => {
+                                        window.location.href = fbWebUrl;
+                                    }, 1000);
+                                } else {
+                                    window.open(fbWebUrl, '_blank', 'noreferrer');
+                                }
+                            }}
+                            className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded hover:border-[#B69E57] hover:text-[#B69E57] transition-all text-gray-400"
+                        >
                             <Facebook size={18} strokeWidth={1.5} />
-                        </a>
+                        </button>
                     </div>
                 </div>
 

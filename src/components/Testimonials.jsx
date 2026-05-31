@@ -125,9 +125,26 @@ const Testimonials = () => {
 
                 {/* CTA area at the bottom */}
                 <div className="pt-12 sm:pt-16 pb-4 flex flex-col sm:flex-row items-center sm:justify-start gap-5 lg:gap-8 testimonial-element relative z-10 w-full mb-10 lg:mb-8">
-                    <a href="https://www.facebook.com/profile.php?id=100063497562888&sk=reviews" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-[#B69E57] hover:bg-[#9C874B] text-white px-9 py-4 rounded-md font-helvetica text-[13px] lg:text-sm uppercase lg:normal-case tracking-widest lg:tracking-wide font-medium shadow-md transition-all duration-300 flex items-center justify-center">
+                    <button 
+                        onClick={(e) => {
+                            e.preventDefault();
+                            const profileId = '100063497562888';
+                            const fbAppUrl = `fb://profile/${profileId}`;
+                            const fbWebUrl = `https://www.facebook.com/profile.php?id=${profileId}&sk=reviews`;
+                            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                            if (isMobile) {
+                                window.location.href = fbAppUrl;
+                                setTimeout(() => {
+                                    window.location.href = fbWebUrl;
+                                }, 1000);
+                            } else {
+                                window.open(fbWebUrl, '_blank', 'noreferrer');
+                            }
+                        }}
+                        className="w-full sm:w-auto bg-[#B69E57] hover:bg-[#9C874B] text-white px-9 py-4 rounded-md font-helvetica text-[13px] lg:text-sm uppercase lg:normal-case tracking-widest lg:tracking-wide font-medium shadow-md transition-all duration-300 flex items-center justify-center"
+                    >
                         Zobrazit více
-                    </a>
+                    </button>
                     <a href="#kontakt" className="font-helvetica text-sm tracking-wide font-medium text-[#1F2937]/90 hover:text-[#1F2937] transition-colors duration-300 group flex items-center justify-center gap-3 w-full sm:w-auto mt-2 sm:mt-0">
                         <span className="relative">
                             Sjednat konzultaci
